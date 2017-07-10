@@ -17,6 +17,8 @@ import org.testng.annotations.Test;
 
 public class UserDetails_grid
 {
+	Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 	public WebDriver driver;
 	public String URL, Node;
     
@@ -67,11 +69,10 @@ public class UserDetails_grid
 		}
 		
 	}
-@Test
+@Test(priority =0)
 public void Signup()
 {
-	Calendar cal = Calendar.getInstance();
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+	
     //System.out.println(cal.getTime());
         //Verifying Home Page
 		//driver.navigate().to("http://c.ap5.visual.force.com/apex/Home");
@@ -151,7 +152,10 @@ else
 		//click Login
 	    driver.navigate().to("http://c.ap5.visual.force.com/apex/Home");
 		driver.findElement(By.name("j_id0:j_id2:j_id5")).click();
-		
+}
+	@Test(priority =1)
+	public void login
+	{
 		// verify it is redirected to Login Page
 		String login = driver.getTitle();
 		if ("LoginPage".equals(login)) 
