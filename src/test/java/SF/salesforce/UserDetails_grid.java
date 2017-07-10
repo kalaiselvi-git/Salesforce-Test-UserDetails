@@ -154,7 +154,7 @@ else
 		driver.findElement(By.name("j_id0:j_id2:j_id5")).click();
 }
 	@Test(priority =1)
-	public void login
+	public void login()
 	{
 		// verify it is redirected to Login Page
 		String login = driver.getTitle();
